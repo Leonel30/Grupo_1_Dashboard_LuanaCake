@@ -31,9 +31,9 @@ class ContentRowTop extends Component {
     constructor(){
         super();
         this.state ={
-            usersList : []
+            usersList :[],
+           
         }
-        
     }
     componentDidMount(){
         fetch('/api/users')
@@ -43,22 +43,23 @@ class ContentRowTop extends Component {
         .then(users =>{
             this.setState({
                 usersList : users.data,
-                totalUsers : users.meta 
+            
             })
         })
         .catch(error=> console.log("error 99"))
     }
     render(){
+      
         return (
+            
             <React.Fragment>
             {/*<!-- Content Row -->*/}
             <div className="row">
                 {
-                  this.state.usersList.map((user,index)=>{
+                    this.state.usersList.map((user,index)=>{
                         return <SmallCard  {...user}  key= {index}/>
-                    })
-                   
-                       /*   <SmallCard {...this.setState.totalUsers}/> */
+                    })  
+                  
                     }
                          
             </div>
@@ -68,3 +69,7 @@ class ContentRowTop extends Component {
     
 }
 export default ContentRowTop;
+
+/* this.state.usersList.map((user,index)=>{
+                        return <SmallCard  {...user}  key= {index}/>
+                    })  */

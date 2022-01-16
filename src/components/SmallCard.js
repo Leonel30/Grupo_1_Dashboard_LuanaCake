@@ -8,7 +8,7 @@ function SmallCard(props){
                     <div className="card-body">
                         <div className="row no-gutters align-items-center">
                             <div className="col mr-2">
-                                <div className={`text-xs font-weight-bold text-${props.color} text-uppercase mb-1`}> {props.id}</div>
+                                <div className={`text-xs font-weight-bold text-${props.color} text-uppercase mb-1`}> {props.total}</div>
                                 
                             </div>
                             <div className="col-auto">
