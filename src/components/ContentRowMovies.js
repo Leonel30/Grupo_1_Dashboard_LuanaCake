@@ -1,12 +1,14 @@
-import React from 'react';
+import React,{Component} from 'react';
 import SmallCard from './SmallCard';
 
-let productInDataBase = {
+
+/* let productInDataBase = {
     color:   "primary",
-    titulo: "Movies in Data Base",
+    titulo: "Total usuarios",
     valor: 21,
     icono: "fas fa-film",
 }
+
 
 let amount ={
     color:   "success",
@@ -22,21 +24,47 @@ let user = {
     icono: "fas fa-user",
 }
 
-let cardProps = [productInDataBase,amount,user];
+let cardProps = [productInDataBase,amount,user]; */
 
 
-function ContentRowTop(){
-    return (
-        <React.Fragment>
-        {/*<!-- Content Row -->*/}
-        <div className="row">
-            {
-                cardProps.map((producto,index)=>{
-                    return <SmallCard  {...producto}  key= {index}/>
-                })
-            }      
-        </div>
-        </React.Fragment>
-    )
+class ContentRowTop extends Component {
+    constructor(){
+        super();
+        this.state ={
+            usersList : []
+        }
+        
+    }
+    componentDidMount(){
+        fetch('/api/users')
+        .then(respuesta =>{
+            return respuesta.json()
+        })
+        .then(users =>{
+            this.setState({
+                usersList : users.data,
+                totalUsers : users.meta 
+            })
+        })
+        .catch(error=> console.log("error 99"))
+    }
+    render(){
+        return (
+            <React.Fragment>
+            {/*<!-- Content Row -->*/}
+            <div className="row">
+                {
+                  this.state.usersList.map((user,index)=>{
+                        return <SmallCard  {...user}  key= {index}/>
+                    })
+                   
+                       /*   <SmallCard {...this.setState.totalUsers}/> */
+                    }
+                         
+            </div>
+            </React.Fragment>
+        )
+    }
+    
 }
 export default ContentRowTop;
