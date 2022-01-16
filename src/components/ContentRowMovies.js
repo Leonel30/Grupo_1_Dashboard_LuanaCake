@@ -1,38 +1,37 @@
 import React,{Component} from 'react';
 import SmallCard from './SmallCard';
+import SmallCardProducts from './SmallCardProducts';
+
+//  let productInDataBase = {
+//     color:   "primary",
+//     titulo: "Total usuarios",
+//     valor: 21,
+//     icono: "fas fa-film",
+// }
 
 
-/* let productInDataBase = {
-    color:   "primary",
-    titulo: "Total usuarios",
-    valor: 21,
-    icono: "fas fa-film",
-}
+// let amount ={
+//     color:   "success",
+//     titulo: "Total awards",
+//     valor: 79,
+//     icono: "fas fa-award",
+// }
 
+// let user = {
+//     color:   "warning",
+//     titulo: "Actors quantity",
+//     valor: 49,
+//     icono: "fas fa-user",
+// }
 
-let amount ={
-    color:   "success",
-    titulo: "Total awards",
-    valor: 79,
-    icono: "fas fa-award",
-}
-
-let user = {
-    color:   "warning",
-    titulo: "Actors quantity",
-    valor: 49,
-    icono: "fas fa-user",
-}
-
-let cardProps = [productInDataBase,amount,user]; */
+// let cardProps = [productInDataBase,amount,user];
 
 
 class ContentRowTop extends Component {
     constructor(){
         super();
         this.state ={
-            usersList :[],
-           
+            usersList :[],         
         }
     }
     componentDidMount(){
@@ -54,14 +53,22 @@ class ContentRowTop extends Component {
             
             <React.Fragment>
             {/*<!-- Content Row -->*/}
-            <div className="row">
+            <div className="container-fluid">
+            <div className="container-fluid">
                 {
                     this.state.usersList.map((user,index)=>{
                         return <SmallCard  {...user}  key= {index}/>
                     })  
-                  
-                    }
-                         
+                }             
+            </div>
+
+            <div className="container-fluid">
+            {
+                    this.state.usersList.map((user,index)=>{
+                        return <SmallCardProducts  {...user}  key= {index}/>
+                    })  
+                }             
+            </div>
             </div>
             </React.Fragment>
         )

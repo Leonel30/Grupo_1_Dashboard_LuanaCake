@@ -10,7 +10,7 @@ function SideBar(){
                 {/*<!-- Sidebar - Brand -->*/}
                 <a className="sidebar-brand d-flex align-items-center justify-content-center" href="/">
                     <div className="sidebar-brand-icon">
-                        <img className="w-50" src={image} alt="LuanaCake"/>
+                        <img className="w-25" src={image} alt="LuanaCake"/>
                     </div>
                 </a>
 
@@ -21,14 +21,14 @@ function SideBar(){
                 <li className="nav-item active">
                     <a className="nav-link" href="/">
                         <i className="fas fa-cookie-bite"></i>
-                        <span>Dashboard - LuanaCake</span></a>
+                        <span> Admin Dashboard</span></a>
                 </li>
 
                 {/*<!-- Divider -->*/}
                 <hr className="sidebar-divider"/>
 
                 {/*<!-- Heading -->*/}
-                <div className="sidebar-heading">Bienvenidos</div>
+                <div className="sidebar-heading">Bienvenido</div>
 
                 {/*<!-- Nav Item - Pages -->*/}
                 <li className="nav-item">
@@ -40,9 +40,9 @@ function SideBar(){
 
                 {/*<!-- Nav Item - Charts -->*/}
                 <li className="nav-item">
-                    <a className="nav-link" href="http://localhost:3001/users/login">
+                    <a className="nav-link" href="http://localhost:3001/admin/products/create">
                         <i className="fas fa-user-check"></i>
-                        <span>Iniciar Seccion</span></a>
+                        <span>Crear Producto</span></a>
                 </li>
 
                 {/*<!-- Nav Item - Tables -->*/}
