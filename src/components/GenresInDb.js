@@ -39,7 +39,7 @@ class  GenresInDb extends Component{
     }
     //Crear las funciones que van a ser llamadas por los eventos
     alerta() {
-        alert('Con esto estamos hasta el momento, deben practicar ustedes')
+        // alert('Con esto estamos hasta el momento, deben practicar ustedes')
     }
 
     render(){
@@ -49,7 +49,7 @@ class  GenresInDb extends Component{
                     <div className="col-lg-6 mb-4">						
                         <div className="card shadow mb-4">
                             <div className="card-header py-3">
-                                <h6  onMouseOver={() => this.alerta() }   className="m-0 font-weight-bold text-gray-800">Genres in Data Base</h6>
+                                <h6  onMouseOver={() => this.alerta() }   className="m-0 font-weight-bold text-gray-800">GenresInDb</h6>
                             </div>
                             <div className="card-body">
                                 <div className="row">
