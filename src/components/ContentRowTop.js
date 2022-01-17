@@ -2,6 +2,7 @@ import React from 'react';
 import imagenFondo from '../assets/images/mandalorian.jpg';
 import GenresInDb from './GenresInDb';
 import ContentRowMovies from './ContentRowMovies';
+import ContentRowProducts from './ContentRowProducts';
 
 function ContentRowTop(){
     return(
@@ -16,7 +17,7 @@ function ContentRowTop(){
 					<ContentRowMovies />
 					{/*<!-- End movies in Data Base -->*/}
 					
-	
+					<ContentRowProducts />
 					{/* <!-- Content Row Last Movie in Data Base -->*/}
 				</div>
 				{/*<!--End Content Row Top-->*/}

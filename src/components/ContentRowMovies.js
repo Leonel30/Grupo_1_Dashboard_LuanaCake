@@ -61,14 +61,6 @@ class ContentRowTop extends Component {
                     })  
                 }             
             </div>
-
-            <div className="container-fluid">
-            {
-                    this.state.usersList.map((user,index)=>{
-                        return <SmallCardProducts  {...user}  key= {index}/>
-                    })  
-                }             
-            </div>
             </div>
             </React.Fragment>
         )
