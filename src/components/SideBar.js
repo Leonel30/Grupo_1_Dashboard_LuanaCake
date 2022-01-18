@@ -1,6 +1,14 @@
 import React from 'react';
 import image from '../assets/images/logo.png';
 
+import {Link,Route,Routes} from 'react-router-dom';
+
+import ContentWrapper from './ContentWrapper';
+
+import AllUsers from './AllUsers';
+import AllProducts from './AllProducts';
+import NotFound from './NotFound';
+
 function SideBar(){
     return(
         <React.Fragment>
@@ -8,20 +16,20 @@ function SideBar(){
             <ul className="navbar-nav bg-gradient-secondary sidebar sidebar-dark accordion" id="accordionSidebar">
 
                 {/*<!-- Sidebar - Brand -->*/}
-                <a className="sidebar-brand d-flex align-items-center justify-content-center" href="/">
+                <Link className="sidebar-brand d-flex align-items-center justify-content-center" to="/">
                     <div className="sidebar-brand-icon">
                         <img className="w-25" src={image} alt="LuanaCake"/>
                     </div>
-                </a>
+                </Link>
 
                 {/*<!-- Divider -->*/}
                 <hr className="sidebar-divider my-0"/>
 
                 {/*<!-- Nav Item - Dashboard -->*/}
                 <li className="nav-item active">
-                    <a className="nav-link" href="/">
+                    <Link className="nav-link" to="/">
                         <i className="fas fa-cookie-bite"></i>
-                        <span> Admin Dashboard</span></a>
+                        <span> Admin Dashboard</span></Link>
                 </li>
 
                 {/*<!-- Divider -->*/}
@@ -32,17 +40,17 @@ function SideBar(){
 
                 {/*<!-- Nav Item - Pages -->*/}
                 <li className="nav-item">
-                    <a className="nav-link collapsed" href="http://localhost:3001/users/register">
+                    <Link className="nav-link collapsed" to="AllUsers">
                         <i className="fas fa-users"></i>
-                        <span>Crear Cuenta</span>
-                    </a>
+                        <span>Todos los Usuarios</span>
+                    </Link>
                 </li>
 
                 {/*<!-- Nav Item - Charts -->*/}
                 <li className="nav-item">
-                    <a className="nav-link" href="http://localhost:3001/admin/products/create">
+                    <a className="nav-link" href="AllProducts">
                         <i className="fas fa-user-check"></i>
-                        <span>Crear Producto</span></a>
+                        <span>Todos los Productos</span></a>
                 </li>
 
                 {/*<!-- Nav Item - Tables -->*/}
@@ -57,6 +65,14 @@ function SideBar(){
             </ul>
             {/*<!-- End of Sidebar -->*/}
             
+            <Routes>
+                <Route exact path="/" element={<ContentWrapper/>} />
+                <Route  path="/AllUsers" element={<AllUsers/>} />
+                <Route  path="/AllProducts" element={<AllProducts/>} />
+                <Route  path="*" element={<NotFound/>} />
+
+            </Routes>
+
         </React.Fragment>
     )
 }

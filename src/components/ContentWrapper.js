@@ -1,7 +1,6 @@
 import React from 'react';
 import TopBar from './TopBar';
 import ContentRowTop from './ContentRow/Top/ContentRowTop';
-import AllTheElemtsDB from './AllTheElemtsDB';
 import Footer from './Footer';
 import ContentRowCenter from './ContentRow/Center/ContentRowCenter';
 
@@ -13,7 +12,6 @@ function ContentWrapper(){
                     <TopBar />
                     <ContentRowTop />
                     <ContentRowCenter />
-                    <AllTheElemtsDB />
                     <Footer />
                 </div>
             </div>    

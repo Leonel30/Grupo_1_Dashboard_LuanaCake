@@ -1,12 +1,17 @@
 import React from 'react';
 import SideBar from './SideBar';
-import ContentWrapper from './ContentWrapper';
+//import ContentWrapper from './ContentWrapper';
+
+import { Link , Route } from 'react-router-dom';
+
 function App() {
   return (
     <React.Fragment>
+
       	<div id="wrapper">
+          
           <SideBar />
-          <ContentWrapper />
+          {/* <ContentWrapper /> */}
         </div>
     </React.Fragment>
   );

@@ -1,11 +1,11 @@
 import React from 'react';
 
 
-function AllTheElemtsDB(){
+function AllProducts(){
     return(
         <React.Fragment>
 				    {/*<!-- PRODUCTS LIST -->*/}
-					<h1 className="h3 mb-2 text-gray-800">All the movies in the Database</h1>
+					<h1 className="h3 mb-2 text-gray-800">Lista de todos los Productos</h1>
 					
 					{/*<!-- DataTales Example -->*/}
 					<div className="card shadow mb-4">
@@ -53,4 +53,4 @@ function AllTheElemtsDB(){
         </React.Fragment>
     )
 }
-export default AllTheElemtsDB;
+export default AllProducts;
