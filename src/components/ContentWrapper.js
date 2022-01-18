@@ -1,25 +1,23 @@
 import React from 'react';
 import TopBar from './TopBar';
-import ContentRowTop from './ContentRowTop';
-import Movie from './Movie';
+import ContentRowTop from './ContentRow/Top/ContentRowTop';
+import AllTheElemtsDB from './AllTheElemtsDB';
 import Footer from './Footer';
-import ContentRowCenter from './ContentRowCenter';
+import ContentRowCenter from './ContentRow/Center/ContentRowCenter';
 
 function ContentWrapper(){
     return (
-        <React.Fragment>
-            {/*<!-- Content Wrapper -->*/}
+        <>
             <div id="content-wrapper" className="d-flex flex-column">
-                {/*<!-- Main Content -->*/}
                 <div id="content">
                     <TopBar />
                     <ContentRowTop />
                     <ContentRowCenter />
-                    <Movie />
+                    <AllTheElemtsDB />
                     <Footer />
                 </div>
             </div>    
-        </React.Fragment>
+        </>
     )
 }
 export default ContentWrapper;

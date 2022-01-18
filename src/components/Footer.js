@@ -1,5 +1,5 @@
 import React from 'react';
-import imagenFondo from '../assets/images/fondofooter.jpg';
+// import imagenFondo from '../assets/images/fondofooter.jpg';
 
 function Footer(){
     return (
@@ -11,7 +11,7 @@ function Footer(){
 					
 					<div className="copyright text-center my-auto " style={{fontSize: 1.5 +'rem'}}>
 
-						<span>Copyright &copy; Dashboard 2021</span>
+						<span>Copyright &copy; Dashboard LuanaCake 2022</span>
 					</div>
 				</div>
 			</footer>

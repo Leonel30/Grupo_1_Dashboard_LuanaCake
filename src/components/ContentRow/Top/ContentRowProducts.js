@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import SmallCardProducts from "./SmallCardProducts";
+import SmallCardProducts from "./SmallCards/SmallCardProducts";
 
 class ContentRowProducts extends Component {
   constructor() {
@@ -22,7 +22,7 @@ class ContentRowProducts extends Component {
   }
   render() {
     return (
-      <React.Fragment>
+      <>
         <div className="container-fluid">
           <div className="container-fluid">
             {this.state.productsList.map((product, index) => {
@@ -30,7 +30,7 @@ class ContentRowProducts extends Component {
             })}
           </div>
         </div>
-      </React.Fragment>
+      </>
     );
   }
 }

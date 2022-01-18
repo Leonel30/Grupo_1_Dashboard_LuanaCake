@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import SmallCard from './SmallCard';
+import SmallCard from './SmallCards/SmallCard';
 
 
 class ContentRowUsers extends Component {
