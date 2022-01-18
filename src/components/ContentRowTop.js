@@ -1,20 +1,19 @@
 import React from 'react';
 import imagenFondo from '../assets/images/mandalorian.jpg';
 import GenresInDb from './GenresInDb';
-import ContentRowMovies from './ContentRowMovies';
+import ContentRowUsers from './ContentRowUsers';
 import ContentRowProducts from './ContentRowProducts';
 
 function ContentRowTop(){
     return(
         <React.Fragment>
+			
 				{/*<!-- Content Row Top -->*/}
-				<div className="container-fluid">
-					<div className="d-sm-flex aligns-items-center justify-content-between mb-4">
-						<h1 className="h3 mb-0 text-gray-800">App Dashboard</h1>
-					</div>
+				<h1 className="h3  text-gray-800 text-center">App Dashboard</h1>
+				<div className="d-flex justify-content-start mb-3 mt-2">
 				
 					{/*<!-- Content Row Movies-->*/}
-					<ContentRowMovies />
+					<ContentRowUsers/>
 					{/*<!-- End movies in Data Base -->*/}
 					
 					<ContentRowProducts />

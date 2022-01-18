@@ -3,7 +3,7 @@ import React from 'react';
 function SmallCard(props){
     return(
         <React.Fragment>
-            <div className="col-md-4 mb-4">
+            <div className="col-md-12 mb-12">
                 <div className={`card border-left-primary shadow h-100 py-2`}>
                     <h4>Cantidad de Productos Registrados</h4>
                     <div className="card-body">
