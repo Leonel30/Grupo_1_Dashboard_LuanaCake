@@ -2,6 +2,7 @@ import React from 'react';
 import LastMovieInDb from './LastProductoAdd';
 import GenresInDb from './GenresInDb';
 
+
 function ContentRowCenter(){
     return (
         <div className="row">
@@ -12,6 +13,7 @@ function ContentRowCenter(){
 
             {/*<!-- Genres in DB -->*/}
             <GenresInDb />
+
 
         </div>
     )

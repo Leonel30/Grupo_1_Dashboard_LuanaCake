@@ -1,7 +1,5 @@
 import React,{Component} from 'react';
-import SmallCard from './SmallCard';
-
-
+import SmallCardProducts from './SmallCardProducts';
 
 //  let productInDataBase = {
 //     color:   "primary",
@@ -28,21 +26,21 @@ import SmallCard from './SmallCard';
 // let cardProps = [productInDataBase,amount,user];
 
 
-class ContentRowMovies extends Component {
+class ContentRowProducts extends Component {
     constructor(){
         super();
         this.state ={
-            usersList :[],         
+            productsList :[],         
         }
     }
     componentDidMount(){
-        fetch('/api/users')
+        fetch('/api/products')
         .then(respuesta =>{
             return respuesta.json()
         })
-        .then(users =>{
+        .then(products =>{
             this.setState({
-                productsList :users.data,
+                usersList : products.data,
             
             })
         })
@@ -58,10 +56,10 @@ class ContentRowMovies extends Component {
             <div className="container-fluid">
             <div className="container-fluid">
                 {
-                    this.state.usersList.map((user,index)=>{
-                     return <SmallCard  {...user}  key= {index}/>
-                    })   
-                }        
+                    this.state.productsList.map((product,index)=>{
+                        return <SmallCardProducts  {...product}  key= {index}/>
+                    })  
+                }             
             </div>
             </div>
             </React.Fragment>
@@ -69,7 +67,7 @@ class ContentRowMovies extends Component {
     }
     
 }
-export default ContentRowMovies;
+export default ContentRowProducts;
 
 /* this.state.usersList.map((user,index)=>{
                         return <SmallCard  {...user}  key= {index}/>
