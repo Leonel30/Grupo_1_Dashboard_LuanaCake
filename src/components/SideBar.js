@@ -49,7 +49,7 @@ function SideBar(){
                 {/*<!-- Nav Item - Charts -->*/}
                 <li className="nav-item">
                     <a className="nav-link" href="AllProducts">
-                        <i className="fas fa-user-check"></i>
+                        <i className="fas fa-box-open"></i>
                         <span>Todos los Productos</span></a>
                 </li>
 

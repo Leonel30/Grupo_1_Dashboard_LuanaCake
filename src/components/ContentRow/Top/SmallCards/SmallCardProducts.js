@@ -13,7 +13,7 @@ function SmallCard(props){
                                 
                             </div>
                             <div className="col-auto">
-                                <i className={`fas fa-users fa-2x text-gray-300`}></i>
+                                <i className={`fas fa-box-open fa-2x text-gray-300`}></i>
                             </div>
                         </div>
                     </div>
