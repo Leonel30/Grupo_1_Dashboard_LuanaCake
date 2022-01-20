@@ -1,11 +1,9 @@
 import React, { Component } from "react";
 
-import ProductoDestacado from "./ProductoDestacado";
-import AllProducts from "../../AllProducts"
 
-import UltimoProductoAgregado from "./UltimoProductoAgregado";
+import AllUsers from "./AllUsers"
 
-class ProductsDb extends Component {
+class UsersDb extends Component {
   constructor() {
     super();
     this.state = {
@@ -28,11 +26,11 @@ class ProductsDb extends Component {
     return (
       <>
         <div className="container-fluid">
-          <div className="d-flex">
+          <div className="container-fluid">
             {this.state.productsList.map((product, index) => {
-              return [<ProductoDestacado {...product} key={index} />,
-                <UltimoProductoAgregado {...product} key={index} />,
-                ];
+              return [
+                
+                <AllUsers {...product} key={index} />];
             })}
           </div>
         </div>
@@ -40,4 +38,4 @@ class ProductsDb extends Component {
     );
   }
 }
-export default ProductsDb;
+export default UsersDb ;

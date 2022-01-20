@@ -1,14 +1,11 @@
 import React from 'react';
 import image from '../assets/images/logo.png';
-import TopBar from './TopBar';
-
 
 import {Link,Route,Routes} from 'react-router-dom';
 
 import ContentWrapper from './ContentWrapper';
-
-import AllUsers from './AllUsers';
-import AllProducts from './AllProducts';
+import Mantenimiento from './Mantenimiento';
+import ProductsDb from './ProductsDb';
 import NotFound from './NotFound';
 
 function SideBar(){
@@ -44,7 +41,7 @@ function SideBar(){
 
                 {/*<!-- Nav Item - Pages -->*/}
                 <li className="nav-item">
-                    <Link className="nav-link collapsed" to="AllUsers">
+                    <Link className="nav-link collapsed" to="Mantenimiento">
                         <i className="fas fa-users"></i>
                         <span>Todos los Usuarios</span>
                     </Link>
@@ -52,17 +49,17 @@ function SideBar(){
 
                 {/*<!-- Nav Item - Charts -->*/}
                 <li className="nav-item">
-                    <a className="nav-link" href="AllProducts">
+                    <Link className="nav-link" to="ProductsDb">
                         <i className="fas fa-box-open"></i>
-                        <span>Todos los Productos</span></a>
+                        <span>Todos los Productos</span></Link>
                 </li>
 
-                {/*<!-- Nav Item - Tables -->*/}
+{/*                 
                 <li className="nav-item">
                     <a className="nav-link" href="/">
                         <i className="fas fa-fw fa-table"></i>
                         <span>Tables</span></a>
-                </li>
+                </li> */}
 
                 {/*<!-- Divider -->*/}
                 <hr className="sidebar-divider d-none d-md-block"/>
@@ -71,8 +68,8 @@ function SideBar(){
             
             <Routes>
                 <Route exact path="/" element={<ContentWrapper/>} />
-                <Route  path="/AllUsers" element={<AllUsers/>} />
-                <Route  path="/AllProducts" element={<AllProducts/>} />
+                <Route  path="/Mantenimiento" element={<Mantenimiento/>} />
+                <Route  path="/ProductsDb" element={<ProductsDb/>} />
                 <Route  path="*" element={<NotFound/>} />
 
             </Routes>

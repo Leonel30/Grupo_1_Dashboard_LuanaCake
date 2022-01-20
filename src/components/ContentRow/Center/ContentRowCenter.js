@@ -6,16 +6,8 @@ import ProductsD from './ProductsDb';
 
 function ContentRowCenter(){
     return (
-        <div className="row">
-
-
-            <ProductsD/>
-            {/* <ProductoDestacado />
-            <GenresInDb />
-            <UltimoProductoAgregado /> */}
-            
-            
-
+        <div className="d-flex ">
+            <ProductsD/>     
         </div>
     )
 }
