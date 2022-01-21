@@ -5,7 +5,8 @@ function NotFound(){
     return(
         <>
             <div className="w-100">
-                <img className="w-100" src={imagen} alt="error 4040" />
+                <h1> Pagina no econtrada - Error 404</h1>
+                <img className="w-50" src={imagen} alt="error 404" />
             </div>       
         </>
     )

@@ -1,6 +1,5 @@
 import React from 'react';
-import imagenFondo from '../assets/images/logo.png';
-
+import imagenFondo from '../../../assets/images/logo.png';
 function LastProductoAdd(){
     return(
         <div className="col-lg-6 mb-4">
