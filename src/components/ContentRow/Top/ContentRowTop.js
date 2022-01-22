@@ -6,7 +6,7 @@ function ContentRowTop() {
   return (
     <>
 
-      <h1 className="h3  text-gray-800 text-center">App Dashboard</h1>
+      <h1 className="h2  text-gray-1000 text-center">LuanaCake</h1>
       <div className="d-flex justify-content-start mb-3 mt-2">
         <ContentRowUsers />
 

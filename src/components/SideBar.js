@@ -4,14 +4,15 @@ import image from '../assets/images/logo.png';
 import {Link,Route,Routes} from 'react-router-dom';
 
 import ContentWrapper from './ContentWrapper';
-
-import AllUsers from './AllUsers';
-import AllProducts from './AllProducts';
+import ProductsDb from './ProductsDb';
+import UsersDb from './UsersDb'
 import NotFound from './NotFound';
 
 function SideBar(){
     return(
         <React.Fragment>
+
+
             {/*<!-- Sidebar -->*/}
             <ul className="navbar-nav bg-gradient-secondary sidebar sidebar-dark accordion" id="accordionSidebar">
 
@@ -40,7 +41,7 @@ function SideBar(){
 
                 {/*<!-- Nav Item - Pages -->*/}
                 <li className="nav-item">
-                    <Link className="nav-link collapsed" to="AllUsers">
+                    <Link className="nav-link collapsed" to="UsersDb">
                         <i className="fas fa-users"></i>
                         <span>Todos los Usuarios</span>
                     </Link>
@@ -48,17 +49,17 @@ function SideBar(){
 
                 {/*<!-- Nav Item - Charts -->*/}
                 <li className="nav-item">
-                    <a className="nav-link" href="AllProducts">
-                        <i className="fas fa-user-check"></i>
-                        <span>Todos los Productos</span></a>
+                    <Link className="nav-link" to="ProductsDb">
+                        <i className="fas fa-box-open"></i>
+                        <span>Todos los Productos</span></Link>
                 </li>
 
-                {/*<!-- Nav Item - Tables -->*/}
+{/*                 
                 <li className="nav-item">
                     <a className="nav-link" href="/">
                         <i className="fas fa-fw fa-table"></i>
                         <span>Tables</span></a>
-                </li>
+                </li> */}
 
                 {/*<!-- Divider -->*/}
                 <hr className="sidebar-divider d-none d-md-block"/>
@@ -67,8 +68,8 @@ function SideBar(){
             
             <Routes>
                 <Route exact path="/" element={<ContentWrapper/>} />
-                <Route  path="/AllUsers" element={<AllUsers/>} />
-                <Route  path="/AllProducts" element={<AllProducts/>} />
+                <Route  path="/UsersDb" element={<UsersDb/>} />
+                <Route  path="/ProductsDb" element={<ProductsDb/>} />
                 <Route  path="*" element={<NotFound/>} />
 
             </Routes>

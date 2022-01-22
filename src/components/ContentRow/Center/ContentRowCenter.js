@@ -1,15 +1,13 @@
 import React from 'react';
-import LastMovieInDb from './LastProductoAdd';
-import GenresInDb from './GenresInDb';
+import ProductsD from './ProductsDb';
+// import ProductoDestacado from './ProductoDestacado';
+// import UltimoProductoAgregado from './UltimoProductoAgregado';
+// import GenresInDb from './GenresInDb';
 
 function ContentRowCenter(){
     return (
-        <div className="row">
-                       
-            <LastMovieInDb />
-
-            <GenresInDb />
-
+        <div className="d-flex ">
+            <ProductsD/>     
         </div>
     )
 }
