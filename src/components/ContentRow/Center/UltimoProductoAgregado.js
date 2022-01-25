@@ -1,5 +1,5 @@
 import React from 'react';
-import imagenFondo from '../../../assets/images/logo.png';
+import imagenFondo from '../../../assets/images/pionono.jpg';
 
 function UltimoProductoAgregado(props){
     return(

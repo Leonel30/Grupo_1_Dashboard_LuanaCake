@@ -1,5 +1,5 @@
 import React from 'react';
-import imagenFondo from '../../../assets/images/product-1642547782216.jpg'; 
+import imagenFondo from '../../../assets/images/tortaChocolate.jpg'; 
 
 function ProductoDestacado(props){
     return(
@@ -11,10 +11,10 @@ function ProductoDestacado(props){
                 <div className="card-body">
                     <div className="text-center">
                         <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: 40 +'rem'}} src={imagenFondo} alt=" Imagen Del Producto "/>
-                        <h4>{props.products[1].name}</h4>
-                        <p>Precio: {props.products[1].price}</p>
-                        <p>Stock: {props.products[1].stock}</p>
-                        <p>Descripción: {props.products[1].description} </p>
+                        <h4>{props.products[111].name}</h4>
+                        <p>Precio: {props.products[111].price}</p>
+                        <p>Stock: {props.products[111].stock}</p>
+                        <p>Descripción: {props.products[111].description} </p>
                     </div>
                 <div>
                 </div>
